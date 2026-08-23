@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tunrayo-dev.github.io/linda-dev/sitemap.xml
