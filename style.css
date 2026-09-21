@@ -176,7 +176,6 @@ h2 {
 
 
 h1 em,
-h2 em,
 blockquote em {
   color: var(--accent);
   font-style: italic;
