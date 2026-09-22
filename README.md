@@ -63,6 +63,8 @@ This repository contains my personal portfolio website, documenting my journey, 
 
 Website: https://tunrayo-dev.github.io/linda-dev/
 GitHub: https://github.com/tunrayo-dev/linda-dev
+LinkedIn: https://ng.linkedin.com/in/motunrayo-idowu-373330258
+Instagram: https://www.instagram.com/tunraayo_idowu?igsh=cjM0ZnNndXJkNHBo
 
 «Action, not titles.»
 
