@@ -226,8 +226,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-    setTimeout(changeWord, 3000);
-
+    setTimeout(() => {
+  console.log("HANDWRITTEN ANIMATION IS RUNNING");
+  changeWord();
+}, 3000);
   
   }
 
