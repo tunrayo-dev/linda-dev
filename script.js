@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================= */
 
   const revealElements =
-    document.querySelectorAll(
-      ".project-card, .pillar-card, .experience-row, .story-chapter, .topic-grid article, .impact-list article, .values-grid article"
-    );
+  document.querySelectorAll(
+    ".project-card, .pillar-card, .experience-row, .story-chapter, .topic-grid article, .impact-list article, .values-grid article, .intro-grid, .split-story, .section-heading, .speaking-cta > div"
+  );
 
 
   if ("IntersectionObserver" in window) {
