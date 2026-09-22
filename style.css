@@ -1152,9 +1152,17 @@ details p {
 
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  align-items: flex-start;
+  gap: 60px;
 
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
@@ -1166,38 +1174,102 @@ details p {
 }
 
 
-.footer-main p {
+.footer-role {
   color: #8f8984;
   font-size: 13px;
+  margin-bottom: 25px;
 }
 
 
-.footer-links {
+.footer-page-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  align-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
 }
 
 
-.footer-links a {
+.footer-page-links a {
   color: #d7d1cc;
   font-size: 12px;
 }
 
 
-.footer-bottom {
-  max-width: var(--max-width);
-  margin: auto;
-
-  border-top: 1px solid #302d2b;
-  padding-top: 20px;
-
-  display: flex;
-  justify-content: space-between;
-
+.footer-copy {
   color: #706b67;
   font-size: 11px;
+  margin-top: 25px;
+}
+
+
+.footer-motto {
+  color: #706b67;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+
+.footer-connect {
+  margin-left: auto;
+  text-align: left;
+}
+
+
+.footer-connect-title {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.footer-socials a {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d7d1cc;
+
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+
+.footer-socials svg {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+
+.footer-socials a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 700px) {
+
+  .footer-main {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-connect {
+    margin-left: 0;
+  }
+
 }
 
 
