@@ -405,6 +405,17 @@ overflow: hidden;
   }
 }
 
+@keyframes handwriting-sway {
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
 
 .hero-text {
   max-width: 570px;
