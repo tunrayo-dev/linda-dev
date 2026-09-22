@@ -239,17 +239,24 @@ const heroElements = document.querySelectorAll(
 
 heroElements.forEach((element, index) => {
 
-  element.style.opacity = "0";
-  element.style.transform = "translateY(24px)";
-  element.style.transition =
-    "opacity 0.8s ease, transform 0.8s ease";
-
-  setTimeout(() => {
-
-    element.style.opacity = "1";
-    element.style.transform = "translateY(0)";
-
-  }, 150 + (index * 150));
+  element.animate(
+    [
+      {
+        opacity: 0,
+        transform: "translateY(24px)"
+      },
+      {
+        opacity: 1,
+        transform: "translateY(0)"
+      }
+    ],
+    {
+      duration: 800,
+      delay: 150 + (index * 150),
+      easing: "ease",
+      fill: "forwards"
+    }
+  );
 
 });
 
