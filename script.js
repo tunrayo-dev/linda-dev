@@ -229,4 +229,28 @@ if (handwrittenWord) {
 
 }
 
+/* =========================
+   HERO ENTRANCE
+========================= */
+
+const heroElements = document.querySelectorAll(
+  ".hero-content .eyebrow, .hero-content h1, .hero-content .hero-text, .hero-content .hero-buttons"
+);
+
+heroElements.forEach((element, index) => {
+
+  element.style.opacity = "0";
+  element.style.transform = "translateY(24px)";
+  element.style.transition =
+    "opacity 0.8s ease, transform 0.8s ease";
+
+  setTimeout(() => {
+
+    element.style.opacity = "1";
+    element.style.transform = "translateY(0)";
+
+  }, 150 + (index * 150));
+
+});
+
 });
