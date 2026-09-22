@@ -1105,6 +1105,8 @@ details p {
   padding: 110px 28px;
 
   border-bottom: 1px solid var(--line);
+
+transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 
