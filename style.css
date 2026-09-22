@@ -1007,6 +1007,18 @@ details p {
 
   font-size: 13px;
   font-weight: 600;
+
+  transition: transform 0.25s ease, background 0.25s ease;
+  cursor: default;
+}
+
+.skills-grid span:hover {
+  transform: translateY(-3px);
+  background: var(--cream);
+}
+
+.skills-grid span:active {
+  transform: scale(0.95);
 }
 
 
