@@ -379,6 +379,7 @@ overflow: hidden;
   font-style: italic;
   min-width: 3.8ch;
   position: relative;
+  animation: handwriting-sway 2s ease-in-out infinite;
 }
 
 .handwritten-word::after {
