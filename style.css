@@ -351,11 +351,6 @@ overflow: hidden;
   transform: scale(1.03);
 }
 
-.reveal.visible .story-image img,
-.reveal.visible .about-photo img,
-.reveal.visible .project-feature-image img {
-  clip-path: inset(0 0 0 0);
-}
 
 .hero-content {
   padding: 80px 7vw 80px 8vw;
