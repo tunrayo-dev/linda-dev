@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const handwrittenWord =
     document.querySelector(".handwritten-word");
 
+console.log(handwrittenWord);
   if (handwrittenWord) {
 
     const words = [
