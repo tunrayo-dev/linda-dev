@@ -351,12 +351,6 @@ overflow: hidden;
   transform: scale(1.03);
 }
 
-.story-image img,
-.about-photo img,
-.project-feature-image img {
-  clip-path: inset(100% 0 0 0);
-}
-
 .reveal.visible .story-image img,
 .reveal.visible .about-photo img,
 .reveal.visible .project-feature-image img {
