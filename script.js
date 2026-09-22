@@ -158,6 +158,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+
+/* =========================
+     HANDWRITTEN HERO WORD
+  ========================= */
+
+  const handwrittenWord =
+    document.querySelector(".handwritten-word");
+
+  if (handwrittenWord) {
+
+    const words = [
+      "learning",
+      "building",
+      "becoming"
+    ];
+
+    let wordIndex = 0;
+
+    const changeWord = () => {
+
+      const currentWord = words[wordIndex];
+
+      let currentLength = currentWord.length;
+
+      handwrittenWord.textContent =
+        currentWord.slice(0, currentLength);
+
+      const erase = setInterval(() => {
+
+        currentLength--;
+
+        handwrittenWord.textContent =
+          currentWord.slice(0, currentLength);
+
+        if (currentLength <= 0) {
+
+          clearInterval(erase);
+
+          wordIndex =
+            (wordIndex + 1) % words.length;
+
+          const nextWord =
+            words[wordIndex];
+
+          let nextLength = 0;
+
+          const write = setInterval(() => {
+
+            nextLength++;
+
+            handwrittenWord.textContent =
+              nextWord.slice(0, nextLength);
+
+            if (nextLength >= nextWord.length) {
+              clearInterval(write);
+              setTimeout(changeWord, 2800);
+            }
+
+          }, 110);
+
+        }
+
+      }, 75);
+
+    };
+
+    setTimeout(changeWord, 3000);
+
+  }
+
+
   }
 
 });
