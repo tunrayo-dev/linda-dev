@@ -162,76 +162,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* =========================
-     HANDWRITTEN HERO WORD
-  ========================= */
+   HANDWRITTEN HERO WORD
+========================= */
 
-  const handwrittenWord =
-    document.querySelector(".handwritten-word");
+const handwrittenWord = document.querySelector(".handwritten-word");
 
-console.log(handwrittenWord);
-  if (handwrittenWord) {
+if (handwrittenWord) {
 
-    const words = [
-      "learning",
-      "building",
-      "becoming"
-    ];
+  const words = ["learning", "building", "becoming"];
+  let wordIndex = 0;
 
-    let wordIndex = 0;
+  function showNextWord() {
 
-    const changeWord = () => {
+    const nextWord = words[wordIndex];
 
-      const currentWord = words[wordIndex];
+    handwrittenWord.textContent = "";
 
-      let currentLength = currentWord.length;
+    let letterIndex = 0;
+
+    const write = setInterval(() => {
 
       handwrittenWord.textContent =
-        currentWord.slice(0, currentLength);
+        nextWord.substring(0, letterIndex + 1);
 
-      const erase = setInterval(() => {
+      letterIndex++;
 
-        currentLength--;
+      if (letterIndex >= nextWord.length) {
 
-        handwrittenWord.textContent =
-          currentWord.slice(0, currentLength);
+        clearInterval(write);
 
-        if (currentLength <= 0) {
+        setTimeout(() => {
 
-          clearInterval(erase);
+          let eraseIndex = nextWord.length;
 
-          wordIndex =
-            (wordIndex + 1) % words.length;
+          const erase = setInterval(() => {
 
-          const nextWord =
-            words[wordIndex];
-
-          let nextLength = 0;
-
-          const write = setInterval(() => {
-
-            nextLength++;
+            eraseIndex--;
 
             handwrittenWord.textContent =
-              nextWord.slice(0, nextLength);
+              nextWord.substring(0, eraseIndex);
 
-            if (nextLength >= nextWord.length) {
-              clearInterval(write);
-              setTimeout(changeWord, 2800);
+            if (eraseIndex <= 0) {
+
+              clearInterval(erase);
+
+              wordIndex =
+                (wordIndex + 1) % words.length;
+
+              showNextWord();
+
             }
 
-          }, 110);
+          }, 75);
 
-        }
+        }, 2800);
 
-      }, 75);
+      }
 
-    };
+    }, 110);
 
-    setTimeout(() => {
-  console.log("HANDWRITTEN ANIMATION IS RUNNING");
-  changeWord();
-}, 3000);
-  
   }
+
+  setTimeout(() => {
+    showNextWord();
+  }, 3000);
+
+}
 
 });
