@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ".project-card, .pillar-card, .experience-row, .story-chapter, .topic-grid article, .impact-list article, .values-grid article, .intro-grid, .split-story, .section-heading, .speaking-cta > div"
   );
 
+revealElements.forEach(element => {
+  element.classList.add("reveal");
+});
 
   if ("IntersectionObserver" in window) {
 
