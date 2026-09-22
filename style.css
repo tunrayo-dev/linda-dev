@@ -1,6 +1,3 @@
-
-
-
 :root {
   --ink: #171513;
   --paper: #f7f3ee;
@@ -1272,6 +1269,26 @@ transition: transform 0.5s ease, box-shadow 0.5s ease;
   color: #706b67;
   font-size: 11px;
   margin-top: 6px;
+}
+
+.footer-motto {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-motto::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.8s ease;
+}
+
+.footer-motto:hover::after {
+  width: 100%;
 }
 
 
