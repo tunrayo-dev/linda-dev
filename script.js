@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    }
+
 
 /* =========================
      HANDWRITTEN HERO WORD
@@ -226,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(changeWord, 3000);
 
-  }
+  
 
 
   }
