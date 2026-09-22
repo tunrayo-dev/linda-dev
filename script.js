@@ -229,8 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(changeWord, 3000);
 
   
-
-
   }
 
 });
