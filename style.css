@@ -1334,6 +1334,9 @@ transition: transform 0.5s ease, box-shadow 0.5s ease;
   width: 32px;
   height: 32px;
 
+   border-radius: 50%;
+  background: transparent;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1357,6 +1360,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease;
 .footer-socials a:hover {
   color: white;
   transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 
