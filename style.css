@@ -616,8 +616,6 @@ overflow: hidden;
   flex-direction: column;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-transition-delay: 0.1s;
 }
 
 .project-card:hover {
